@@ -1,0 +1,114 @@
+                    @keyframes slideranimation {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        20% {
+                            transform: translateX(0);
+                        }
+                        25% {
+                            transform: translateX(-75rem);
+                        }
+                        45% {
+                            transform: translateX(-75rem);
+                        }
+                        50% {
+                            transform: translateX(-150rem);
+                        }
+                        70% {
+                            transform: translateX(-150rem);
+                        }
+                        75% {
+                            transform: translateX(-225rem);
+                        }
+                        95% {
+                            transform: translateX(-225rem);
+                        }
+                    }
+                    
+                    *,
+                    *::after,
+                    *::before {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: inherit;
+                        /*Its changes the box model so that it dosen't add border and padding no longer added*/
+                    }
+                    
+                    html {
+                        font-size: 62.5%;
+                    }
+                    
+                    body {
+                        box-sizing: border-box;
+                        /*Its changes the box model so that it dosen't add border and padding no longer added*/
+                    }
+                    
+                    body {
+                        font-family: 'Lato', sans-serif;
+                        background: linear-gradient(90deg, rgb(255, 255, 255) 40%, rgba(161, 0, 0, 0.295));
+                        font-weight: 400;
+                        padding: 2rem;
+                    }
+                    
+                    .img-size {
+                        height: 35rem;
+                        width: 75rem;
+                    }
+                    
+                    .container {
+                        width: 75rem;
+                        overflow: hidden;
+                        position: relative;
+                    }
+                    
+                    .container:hover>.slider-arrow {
+                        opacity: 0.8;
+                    }
+                    
+                    .slidebox {
+                        width: 300rem;
+                        animation-name: slideranimation;
+                        animation-duration: 20s;
+                        animation-iteration-count: infinite;
+                    }
+                    
+                    .slidebox img {
+                        float: left;
+                    }
+                    
+                    .slider-arrow {
+                        margin: 0 2.5rem;
+                        font-size: 1.8rem;
+                        color: white;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 45%;
+                        width: 93%;
+                        opacity: .5;
+                        transition: all .3s;
+                    }
+                    
+                    .slider-arrow .slider__left-arr {
+                        float: left;
+                        border: 3px solid #fff;
+                        padding: 4px 15px 6px 12px;
+                        border-radius: 50rem;
+                        cursor: pointer;
+                        opacity: .5;
+                        transition: all .3s;
+                    }
+                    
+                    .slider-arrow .slider__right-arr {
+                        float: right;
+                        border: 3px solid #fff;
+                        padding: 4px 12px 6px 15px;
+                        border-radius: 50rem;
+                        cursor: pointer;
+                        opacity: .5;
+                        transition: all .3s;
+                    }
+                    
+                    .slider__left-arr:hover,
+                    .slider__right-arr:hover {
+                        opacity: 1;
+                    }
